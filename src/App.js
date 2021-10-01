@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import './App.css';
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import { Posts } from './components/Posts';
-
+import { Post } from './components/Post';
 function App() {
 
   return (
@@ -11,8 +11,9 @@ function App() {
       <Header />
       <div className='App'>
         <Switch>
-        <Route exact path='/'> <Redirect to='/posts'/> </Route>
-        <Route path='/posts' component={Posts} />
+          <Route exact path='/'> <Redirect to='/posts' /> </Route>
+          <Route path='/posts' component={Posts} />
+          <Route exact path='/post/:id' component={Post}/>
         </Switch>
       </div>
     </BrowserRouter>

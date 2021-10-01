@@ -1,0 +1,39 @@
+.post_block {
+    width: 600px;
+    min-height: 250px;
+    margin: 80px auto;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+.comments_block {
+    width: 600px;
+    min-height: 250px;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.title {
+    color: orange;
+}
+
+.line {
+    margin-top: 5px;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.text {
+    margin-top: 15px;
+}
+
+.comment_body {
+    margin-top: 15px;
+    font-size: 15px;
+}
