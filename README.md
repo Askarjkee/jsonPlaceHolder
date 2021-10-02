@@ -1,3 +1,1 @@
-[https://askarjkee.github.io/jsonPlaceHolder/] (jsonPlaceHolderApi)
-
-
+https://askarjkee.github.io/jsonPlaceHolder
