@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { JSONPlaceHolderAPI } from '../../api';
-import { Post } from './Post';
+import { PostItem } from './PostItem';
 import styles from './post.module.css'
-import { Pagination } from './Pagination';
+import { Pagination } from '../commons/Pagination';
 import { Spinner } from '../commons/Spinner'
 
 export const Posts = () => {
@@ -10,7 +10,7 @@ export const Posts = () => {
     const [error, setError] = useState(null)
     const [posts, setPosts] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const [currentPosts, setCurrentPosts] = useState([])
+    const [currentPostsForShow, setCurrentPostsForShow] = useState([])
 
     useEffect(() => {
         JSONPlaceHolderAPI.getPosts()
@@ -29,7 +29,7 @@ export const Posts = () => {
         if (posts) {
             const lastIndex = currentPage + '0'
             const startIndex = lastIndex - 10
-            setCurrentPosts(posts.slice(+startIndex, +lastIndex))
+            setCurrentPostsForShow(posts.slice(+startIndex, +lastIndex))
         }
     }, [currentPage, posts])
 
@@ -53,8 +53,8 @@ export const Posts = () => {
 
             <ul className={styles.list}>
                 {
-                    currentPosts.map(post => {
-                        return <Post key={post.id} post={post} />
+                    currentPostsForShow.map(post => {
+                        return <PostItem key={post.id} post={post} />
                     })
                 }
             </ul>

@@ -1,7 +1,7 @@
-import { Post } from "./Post";
+import { PostItem } from "./PostItem";
 import { Posts } from "./Posts";
 
 export {
-    Post,
+    PostItem,
     Posts
 };

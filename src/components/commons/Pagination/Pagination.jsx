@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from './post.module.css'
+import styles from './pagination.module.css'
 
 export const Pagination = ({ totalItemsCount, pageSize, currentPage, onPageChanged, portionSize }) => {
 
@@ -17,11 +17,8 @@ export const Pagination = ({ totalItemsCount, pageSize, currentPage, onPageChang
         setPortionNumber(Math.ceil(currentPage / portionSize))
     }, [currentPage, portionSize])
 
-    
     const leftPortionPageNumber = (portionNumber - 1) * portionSize + 1
     const rightPortionPageNumber = portionNumber * portionSize
-    
-;
 
     return (
         <div>

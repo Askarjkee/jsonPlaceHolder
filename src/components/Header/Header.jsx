@@ -4,7 +4,10 @@ import styles from './header.module.css'
 export const Header = () => {
     return (
         <header className={styles.header}>
-            <NavLink className={styles.link} to={'/posts'}>Posts</NavLink>
+            <nav>
+                <NavLink className={styles.link} to={'/posts'}>Posts</NavLink>
+                <NavLink className={styles.link} to={'/users'}>Users</NavLink>
+            </nav>
         </header>
     )
 }

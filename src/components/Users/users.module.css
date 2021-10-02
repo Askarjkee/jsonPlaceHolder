@@ -1,0 +1,26 @@
+.users {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.users_block {
+    width: 250px;
+    min-height: 150px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+.users_name {
+    color: orange;
+    font-size: 15px;
+}
+
+.users_nickname {
+    font-weight: bold;
+}

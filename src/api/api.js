@@ -18,5 +18,10 @@ export const JSONPlaceHolderAPI = {
     getComments: (id) => {
         return instance.get(`posts/${id}/comments`)
             .then(res => res.data)
+    },
+    getUsers: () => {
+        return instance.get('users')
+            .then(res => res.data)
     }
+
 }

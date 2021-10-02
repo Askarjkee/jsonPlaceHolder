@@ -11,6 +11,7 @@
     text-decoration: none;
     color: white;
     transition: 0.5s all;
+    margin-right: 10px;
 }
 
 .link:hover {

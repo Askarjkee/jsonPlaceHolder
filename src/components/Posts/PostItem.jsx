@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styles from './post.module.css';
 
-export const Post = ({ post }) => {
+export const PostItem = ({ post }) => {
     
     return (
         <li className={styles.item}>
