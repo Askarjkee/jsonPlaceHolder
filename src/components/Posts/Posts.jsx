@@ -12,6 +12,8 @@ export const Posts = () => {
     const [currentPage, setCurrentPage] = useState(1)
     const [currentPostsForShow, setCurrentPostsForShow] = useState([])
 
+    const pageSize = 10;
+
     useEffect(() => {
         JSONPlaceHolderAPI.getPosts()
             .then(data => {
@@ -27,8 +29,8 @@ export const Posts = () => {
     useEffect(() => {
         
         if (posts) {
-            const lastIndex = currentPage + '0'
-            const startIndex = lastIndex - 10
+            const lastIndex = currentPage * pageSize
+            const startIndex = lastIndex - pageSize
             setCurrentPostsForShow(posts.slice(+startIndex, +lastIndex))
         }
     }, [currentPage, posts])
@@ -46,7 +48,7 @@ export const Posts = () => {
             <div><h1>Total posts: {posts.length}</h1></div>
             <Pagination
                 totalItemsCount={posts.length}
-                pageSize={10}
+                pageSize={pageSize}
                 currentPage={currentPage}
                 onPageChanged={setCurrentPage}
                 portionSize={5} />
